@@ -1,0 +1,25 @@
+﻿Nothing: 
+  - ahk_class WorkerW                         #桌面
+  - ahk_class Age of Empires II Expansion     
+  - ahk_class Valve001                        #CS
+  - ahk_exe dota2.exe                         
+  - ahk_exe TslGame.exe                       #吃鸡
+  - ahk_exe FortniteClient-Win64-Shipping.exe   #堡垒之夜
+  - ahk_exe dontstarve_steam.exe
+  - ahk_exe javaw.exe
+  - ahk_exe Terraria.exe
+AltF4:
+  - ahk_class PPTFrameClass                   #PPT
+  - ahk_class WeChatMainWndForPC              #WeChat
+  - ahk_class OpusApp                         #Word
+  - ahk_class ApplicationFrameWindow          #Win10设置
+CtrlW:
+  - ahk_class MozillaWindowClass              
+  - ahk_class Chrome_WidgetWin_1              
+  - ahk_exe sublime_text.exe                 
+  - ahk_exe ApplicationFrameHost.exe          #Microsoft Edge
+  - ahk_class CabinetWClass               #clover
+Esc:
+  - ahk_class TFullScreenWindow               #FastStone
+
+

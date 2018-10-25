@@ -1,2 +1,14 @@
-# personal_script
-personal script, based on AutoHotkey.
+# 个人日常使用脚本
+
+需要安装AutoHotkey且自动获取管理员权限
+
+* Zephry's_script.ahk为主程序
+* Lib文件夹中包含鼠标手势所需文件
+* A.ico为启动栏图标
+
+**功能：**
+
+* 添加各种常用搜索热键，搜索内容为当前选定文本
+* Win+鼠标滚轮：调整音量/静音
+* 左右键同时按可关闭当前窗口，L_R.yml为其配置
+* 按住右键使用鼠标手势，Gesture.yml为其配置

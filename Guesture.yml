@@ -1,0 +1,147 @@
+﻿Chrome.exe: 
+  26: 
+    Name: 关闭
+    key: ^w
+  48:
+    Name: 取消关闭
+    key: ^+t
+  62: 
+    Name: End
+    key: !!str {End}
+  64: 
+    Name: 打开新的标签页 
+    key: ^t
+  68: 
+    Name: Home
+    key: !!str {Home}
+  84: 
+    Name: 下一个标签页 
+    key: ^+{Tab}
+  86: 
+    Name: 上一个标签页 
+    key: ^{Tab}
+  248: 
+    Name: 下载页
+    key: ^j
+  268: 
+    Name: 书签页
+    key: ^+b
+  464: 
+    Name: 历史页
+    key: ^h
+  842: 
+    Name: 源代码
+    key: ^u
+  862: 
+    Name: 切换全屏
+    key: !!str {F11}
+
+firefox.exe: 
+  2: 
+    Name: 下翻页
+    key: !!str {PgDn}
+  8: 
+    Name: 上翻页
+    key: !!str {PgUp}
+  26: 
+    Name: 关闭
+    key: !+{F4}
+  48:
+    Name: 取消关闭
+    key: ^+t
+  62: 
+    Name: End
+    key: !!str {End}
+  64: 
+    Name: 打开新的标签页 
+    key: ^t
+  68: 
+    Name: Home
+    key: !!str {Home}
+  84: 
+    Name: 下一个标签页 
+    key: ^+{Tab}
+  86: 
+    Name: 上一个标签页 
+    key: ^{Tab}
+  268: 
+    Name: 书签页
+    key: ^+b
+  464: 
+    Name: 历史页
+    key: ^h
+    
+Default: 
+  2: 
+    Name: 最小化
+    key: !!str #{Down}
+  4: 
+    Name: 后退
+    key: !!str {Browser_Back}
+  6: 
+    Name: 前进
+    key: !!str {Browser_Forward}
+  8: 
+    Name: 最大化
+    key: !!str #{Up}
+  24: 
+    Name: 删除
+    key: !!str {Del}
+  26: 
+    Name: 关闭
+    key: @Close
+  28: 
+    Name: 停止
+    key: !!str {Browser_Stop}
+  48:
+    Name: 取消关闭
+    key: ^+z
+  62: 
+    Name: 页尾
+    key: ^{End}
+  64: 
+    Name: 新页
+    key: ^n
+  68: 
+    Name: 页首
+    key: !!str ^{Home}
+  82: 
+    Name: 刷新
+    key: !!str {Browser_Refresh}
+  426: 
+    Name: 计算器
+    key: @Run|calc
+
+sublime_text.exe:
+  2: 
+    Name: 最小化
+    key: !!str #{Down}
+  4: 
+    Name: 上一个标签页 
+    key: ^+{Tab}
+  6: 
+    Name: 下一个标签页 
+    key: ^{Tab}
+  8: 
+    Name: 最大化
+    key: !!str #{Up}
+  26: 
+    Name: 关闭
+    key: !+{F4}
+  48:
+    Name: 取消关闭
+    key: ^+t
+  62: 
+    Name: 页尾
+    key: ^{End}
+  64: 
+    Name: 新页
+    key: ^n
+  68: 
+    Name: 页首
+    key: !!str ^{Home}
+
+Exclude: 
+  - WorkerW     #abc
+
+
