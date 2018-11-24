@@ -8,6 +8,8 @@
   - ahk_exe dontstarve_steam.exe
   - ahk_exe javaw.exe
   - ahk_exe Terraria.exe
+  - ahk_exe mstsc.exe
+  - ahk_exe streaming_client.exe
 AltF4:
   - ahk_class PPTFrameClass                   #PPT
   - ahk_class WeChatMainWndForPC              #WeChat

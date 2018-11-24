@@ -1,6 +1,7 @@
 ﻿#SingleInstance force
 SetFormat,float,0.0
 SetTitleMatchMode RegEx
+SetWorkingDir, %A_ScriptDir%
 Menu, TRAY, Icon, A.ico
 
 Menu,Tray,Add,Edit...,myEdit
@@ -145,10 +146,10 @@ return
 {
 
 	;用google搜索 
-	#g:: 
+	#h:: 
 	Send ^c
 	Sleep 300
-	Run https://www.google.com.tw/webhp#newwindow=1&q=%clipboard% 
+	Run https://www.google.com.hk/webhp#newwindow=1&q=%clipboard% 
 	return 
 	;用百度搜索 
 	#b:: 
@@ -215,7 +216,8 @@ return
 
 ;;;;;;;;;;;;;;;;; 在屏幕右下角滚动鼠标来调节音量.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 #WheelUp::Send {Volume_Up}  ; 增加 1 个音程的主音量 (通常为 5%).
-#WheelDown::Send {Volume_Down 3}  ; 降低 3 个音程的主音量.
+; #WheelDown::Send {Volume_Down 3}  ; 降低 3 个音程的主音量.
+#WheelDown::Send {Volume_Down}  ; 降低 1 个音程的主音量.
 #MButton::Send {Volume_Mute}  ; 对主音量进行静音/取消静音.
 ; #If MouseIsOver()
 ; 	WheelUp::
