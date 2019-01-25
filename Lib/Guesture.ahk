@@ -3,12 +3,12 @@ Guesture_Init(G)
 	Global G_R
 	for k,v in G.Exclude[""]
 		GroupAdd, G_ExcludeGroup, %v%
-	Gui, 76: +LastFound -Caption +ToolWindow +AlwaysOnTop
-	Gui, 76: Color, FFFFFF
-	WinSet, TransColor, FFFFFF
-	Gui, 76: Show, X0 Y0 W%A_ScreenWidth% H%A_ScreenHeight% NA, AHK �������
-	G.ID := WinExist()
-	G.DC := DllCall("GetDC", "uint", G.ID)
+	; Gui, 76: +LastFound -Caption +ToolWindow +AlwaysOnTop
+	; Gui, 76: Color, FFFFFF
+	; WinSet, TransColor, FFFFFF
+	; Gui, 76: Show, X0 Y0 W%A_ScreenWidth% H%A_ScreenHeight% NA, AHK �������
+	; G.ID := WinExist()
+	; G.DC := DllCall("GetDC", "uint", G.ID)
 	VarSetCapacity(G_R, 16, 0), NumPut(A_ScreenHeight, NumPut(A_ScreenWidth, G_R, 8, "Int"), "Int")	G.ONOFF:=1
 }
 Guesture_On()
@@ -26,7 +26,7 @@ G()
 {
 Global G,G_Id,G_P,G_T,G_R
 MouseGetPos, X1,Y1
-DllCall("MoveToEx", "uint", G.DC, "int", X1, "int", Y1, "uint", 0)
+; DllCall("MoveToEx", "uint", G.DC, "int", X1, "int", Y1, "uint", 0)
 WinGetTitle, G_T, ahk_ID %G_Id%
 WinGet, G_P, ProcessName, ahk_ID %G_Id%
 ;~ WinActivate, % "ahk_id " G.ID
@@ -38,8 +38,8 @@ While, GetKeyState("RButton","P")
 		Sleep, 20
 		Continue
 	}
-	DllCall("SelectObject", "uint", G.DC, "uint", DllCall("CreatePen", "int", 0, "int", 8, "uint", DllCall("shlwapi.dll\ColorHLSToRGB",Int,A_Sec*4,Int,120,Int,240)))
-	DllCall("LineTo", "uint", G.DC, "int", X2, "int", Y2)
+	; DllCall("SelectObject", "uint", G.DC, "uint", DllCall("CreatePen", "int", 0, "int", 8, "uint", DllCall("shlwapi.dll\ColorHLSToRGB",Int,A_Sec*4,Int,120,Int,240)))
+	; DllCall("LineTo", "uint", G.DC, "int", X2, "int", Y2)
 	Z:=(X2-X1)>-(Y2-Y1) ? 0 : 2, Z+=(X2-X1)>(Y2-Y1) ? 6 : 2
 	if (Z<>SubStr(G1, 0, 1)) && (abs(Y1-Y2)>4 || abs(X1-X2)>4)
 		G1.=Z

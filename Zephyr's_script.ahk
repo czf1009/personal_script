@@ -167,7 +167,7 @@ return
 	#z:: 
 	Send ^c
 	Sleep 300
-	Run http://www.zhihu.com/search?q=%clipboard%
+	Run https://www.zhihu.com/search?type=content&q=%clipboard%
 	return 
 	;用优酷搜索
 	#y:: 
