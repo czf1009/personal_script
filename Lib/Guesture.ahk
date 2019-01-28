@@ -1,3 +1,4 @@
+﻿;;;;;;;;;;;鼠标手势
 Guesture_Init(G)
 {
 	Global G_R
@@ -6,7 +7,7 @@ Guesture_Init(G)
 	; Gui, 76: +LastFound -Caption +ToolWindow +AlwaysOnTop
 	; Gui, 76: Color, FFFFFF
 	; WinSet, TransColor, FFFFFF
-	; Gui, 76: Show, X0 Y0 W%A_ScreenWidth% H%A_ScreenHeight% NA, AHK �������
+	; Gui, 76: Show, X0 Y0 W%A_ScreenWidth% H%A_ScreenHeight% NA, AHK 鼠标手势
 	; G.ID := WinExist()
 	; G.DC := DllCall("GetDC", "uint", G.ID)
 	VarSetCapacity(G_R, 16, 0), NumPut(A_ScreenHeight, NumPut(A_ScreenWidth, G_R, 8, "Int"), "Int")	G.ONOFF:=1
@@ -48,7 +49,7 @@ While, GetKeyState("RButton","P")
 		Command := G[G_P][G1].Key, Name := G[G_P][G1].Name
 	else if G["Default"].HasKey(G1)
 		Command := G["Default"][G1].Key, Name := G["Default"][G1].Name
-	else	Command := "{RButton}", Name := "��"
+	else	Command := "{RButton}", Name := "无"
 	if G1
 		Tooltip, % G1 " = " Name
 }
@@ -58,25 +59,25 @@ if ! G1
 	DllCall("FillRect", "uint", G.DC, "int", &G_R, "uint", 0)
 	Return
 }
-; if GetKeyState("LWin","P")			;��װLWin����
+; if GetKeyState("LWin","P")			;按住LWin画画
 ; {
 ; 	Tooltip
 ; 	Return
 ; }
 DllCall("FillRect", "uint", G.DC, "int", &G_R, "uint", 0)
 
-if Asc(Command)=64									;@��ͷ�������Ǻ���
+if Asc(Command)=64									;@开头的命令是函数
 {
 	StringSplit, Command, Command, |
 	%Command1%(Command2)
 }
-else if Asc(Command)=36									;$��ͷ�������Ǳ�ǩ
+else if Asc(Command)=36									;$开头的是标签
 {
 	Command:=SubStr(Command,2)
 	if IsLabel(Command)
 		GoSub, %Command%
 }
-else												;���Ͱ���
+else												;发送按键
 	Send, %Command%
 Tooltip
 ;~ SetTimer, Timer_G_Tooltip, -1000
@@ -93,7 +94,7 @@ return
 @Close()
 {
 	Global
-	if (G_P=="explorer.exe" && G_T=="")			;����
+	if (G_P=="explorer.exe" && G_T=="")			;桌面
 		Return
 	else
 	{
