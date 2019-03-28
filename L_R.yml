@@ -10,6 +10,8 @@
   - ahk_exe Terraria.exe
   - ahk_exe mstsc.exe
   - ahk_exe streaming_client.exe
+  - ahk_exe r5apex.exe                        #apex
+  - ahk_class TMobaXtermForm                  #MobaXterm
 AltF4:
   - ahk_class PPTFrameClass                   #PPT
   - ahk_class WeChatMainWndForPC              #WeChat
