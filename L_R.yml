@@ -1,5 +1,5 @@
 ﻿Nothing: 
-  - ahk_class WorkerW                         #桌面
+  - ahk_class Progman                         #桌面
   - ahk_class Age of Empires II Expansion     
   - ahk_class Valve001                        #CS
   - ahk_exe dota2.exe                         
@@ -14,6 +14,10 @@
   - ahk_class TMobaXtermForm       #MobaXterm
   - ahk_class TMobaRDPForm
   - ahk_class TFormDetachedTab
+  - ahk_exe Resolve.exe
+  - ahk_class Warcraft III
+  - ahk_exe ModernWarfare.exe
+
 
 AltF4:
   - ahk_class PPTFrameClass                   #PPT

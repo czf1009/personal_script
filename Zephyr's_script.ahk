@@ -127,8 +127,9 @@ Guesture_Init(G)
 	Return
 }
 ;;;;;;;;;;;;;;;;;;;;;;;;热键修改;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#f::run "D:\Program Files\Everything\Everything.exe"	;Win+f 打开Everything
+;#f::run "D:\Program Files\Everything\Everything.exe"	;Win+f 打开Everything
 AppsKey::RCtrl
+; RAlt::LWin
 
 ;打开BlackBoard----------------------------------------------------
 :://html::
@@ -149,7 +150,7 @@ return
 	#h:: 
 	Send ^c
 	Sleep 300
-	Run https://www.google.com.hk/webhp#newwindow=1&q=%clipboard% 
+	Run https://www.google.com.hk/search?q=%clipboard% 
 	return 
 	;用百度搜索 
 	#b:: 
@@ -169,11 +170,11 @@ return
 	Sleep 300
 	Run https://www.zhihu.com/search?type=content&q=%clipboard%
 	return 
-	;用优酷搜索
+	;用Youtube搜索
 	#y:: 
 	Send ^c
 	Sleep 300
-	Run http://www.soku.com/search_video/q_%clipboard%
+	Run https://www.youtube.com/results?search_query=%clipboard%
 	return 
 	;用京东搜索
 	#j:: 
@@ -198,12 +199,6 @@ return
 	Send ^c
 	Sleep 300
 	Run http://search.bilibili.com/all?keyword=%clipboard%
-	return 
-	;用torrentkitty搜索
-	#`:: 
-	Send ^c
-	Sleep 300
-	Run https://www.torrentkitty.tv/search/%clipboard%
 	return 
 	;stackoverflow搜索
 	#s:: 

@@ -1,4 +1,10 @@
 ﻿Chrome.exe: 
+  2: 
+    Name: 下翻页
+    key: !!str {PgDn}
+  8: 
+    Name: 上翻页
+    key: !!str {PgUp}
   26: 
     Name: 关闭
     key: ^w
