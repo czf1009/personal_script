@@ -1,4 +1,4 @@
-﻿Nothing: 
+Nothing: 
   - ahk_class Progman                         #桌面
   - ahk_class Age of Empires II Expansion     
   - ahk_class Valve001                        #CS
@@ -8,6 +8,8 @@
   - ahk_exe dontstarve_steam.exe
   - ahk_exe javaw.exe
   - ahk_exe Terraria.exe
+  - ahk_exe tModLoader.exe
+  - ahk_exe tModLoader64bit.exe
   - ahk_exe mstsc.exe
   - ahk_exe streaming_client.exe
   - ahk_exe r5apex.exe                        #apex
@@ -17,8 +19,10 @@
   - ahk_exe Resolve.exe
   - ahk_class Warcraft III
   - ahk_exe ModernWarfare.exe
-
-
+  - ahk_exe TS4_x64.exe           #The sims4
+  - ahk_exe Cities.exe            #Cities Skylines
+  - ahk_exe Torchlight2.exe
+  - ahk_exe YuanShen.exe
 AltF4:
   - ahk_class PPTFrameClass                   #PPT
   - ahk_class WeChatMainWndForPC              #WeChat

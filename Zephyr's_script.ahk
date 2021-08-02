@@ -127,6 +127,7 @@ Guesture_Init(G)
 	Return
 }
 ;;;;;;;;;;;;;;;;;;;;;;;;热键修改;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#o::SendMessage, 0x112, 0xF170, 2,, Program Manager ;关闭屏幕
 ;#f::run "D:\Program Files\Everything\Everything.exe"	;Win+f 打开Everything
 AppsKey::RCtrl
 ; RAlt::LWin
@@ -205,6 +206,12 @@ return
 	Send ^c
 	Sleep 300
 	Run https://stackoverflow.com/search?q=%clipboard%
+	return 	
+	;csdn搜索
+	#c:: 
+	Send ^c
+	Sleep 300
+	Run https://so.csdn.net/so/search/all?q=%clipboard%
 	return 
 
 }
@@ -247,7 +254,7 @@ RemoveToolTip:
 └──────────────────┘
 */
 myEdit:
-	run,D:\Program Files\Sublime Text 3.3126x64\sublime_text.exe,"%A_ScriptFullPath%"
+	run,D:\Program Files\Sublime Text\sublime_text.exe,"%A_ScriptFullPath%"
 	Return
 
 changeBlackList:	
