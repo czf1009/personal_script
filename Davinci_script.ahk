@@ -3,8 +3,10 @@ SetFormat,float,0.0
 SetTitleMatchMode RegEx
 SetWorkingDir, %A_ScriptDir%
 
-Menu,Tray,Add,Edit...,myEdit
 Menu,Tray,Add,,changeBlackList
+Menu,Tray,Add,编辑主脚本,editMain
+
+EditorPath = D:\Program Files\Sublime Text\sublime_text.exe ;放在热键映射之后会失效
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;获取管理员权限;;;;;;;;;;;;;;;;;;;;;
 /*
@@ -38,13 +40,10 @@ If not A_IsAdmin    ;验证是否用了管理员权限 否则自动用管理员�
 	return 
 #If
 
-/*
-┌──────────────────┐
-├─托盘菜单事件
-└──────────────────┘
-*/
-myEdit:
-	run,D:\Program Files\Sublime Text\sublime_text.exe,"%A_ScriptFullPath%"
+
+;=======================托盘菜单事件=======================
+editMain:
+	Run %EditorPath% %A_ScriptDir%\Zephyr's_script.ahk
 	Return
 
 changeBlackList:	
