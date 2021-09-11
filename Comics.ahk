@@ -16,7 +16,7 @@ If not A_IsAdmin    ;验证是否用了管理员权限 否则自动用管理员�
     ExitApp
   }
 
-#IfWinActive 漫畫線上免費看
+#IfWinActive 动漫
 	f::LButton
     s::Browser_Back
     e::u
@@ -24,7 +24,7 @@ If not A_IsAdmin    ;验证是否用了管理员权限 否则自动用管理员�
 
 ;=======================托盘菜单事件=======================
 editMain:
-    Run %EditorPath% %A_ScriptDir%\Zephyr's_script.ahk
+    Run %EditorPath% %A_ScriptFullPath%
     Return
 
 changeBlackList:    

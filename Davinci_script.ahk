@@ -43,7 +43,7 @@ If not A_IsAdmin    ;验证是否用了管理员权限 否则自动用管理员�
 
 ;=======================托盘菜单事件=======================
 editMain:
-	Run %EditorPath% %A_ScriptDir%\Zephyr's_script.ahk
+	Run %EditorPath% %A_ScriptFullPath%
 	Return
 
 changeBlackList:	

@@ -68,7 +68,7 @@ return
 
 ;=======================托盘菜单事件=======================
 editMain:
-    Run %EditorPath% %A_ScriptDir%\Zephyr's_script.ahk
+    Run %EditorPath% %A_ScriptFullPath%
     Return
 
 changeBlackList:    

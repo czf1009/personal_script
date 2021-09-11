@@ -141,7 +141,7 @@ RemoveToolTip:
 
 ;=======================托盘菜单事件=======================
 editMain:
-	Run %EditorPath% %A_ScriptDir%\Zephyr's_script.ahk
+	Run %EditorPath% %A_ScriptFullPath%
 	Return
 editL_R:
 	Run %EditorPath% %A_ScriptDir%\L_R.yml
