@@ -42,7 +42,15 @@ Guesture_Init(G)
 ;#f::run "D:\Program Files\Everything\Everything.exe"	;Win+f 打开Everything
 AppsKey::RCtrl
 ; RAlt::LWin
-
+#8::
+Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe %A_ScriptDir%\ScreenScaling.ps1 0
+return
+#9::
+Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe %A_ScriptDir%\ScreenScaling.ps1 1
+return
+#0::
+Run C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe %A_ScriptDir%\ScreenScaling.ps1 2
+return
 
 ;打开BlackBoard----------------------------------------------------
 :://html::

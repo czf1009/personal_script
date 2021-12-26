@@ -1,5 +1,6 @@
 Nothing: 
   - ahk_class Progman                         #桌面
+  - ahk_class Shell_TrayWnd                   #任务栏
   - ahk_class Age of Empires II Expansion     
   - ahk_class Valve001                        #CS
   - ahk_exe dota2.exe                         
