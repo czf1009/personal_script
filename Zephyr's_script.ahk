@@ -65,6 +65,25 @@ return
 Run http://www.w3school.com.cn/jsref/index.asp
 return
 
+:://us1::
+Send 365964325@qq.com{Tab}yddgbfxdybt
+Click, 893 841
+Send {enter}
+return
+
+:://us2::
+Send czf1009@126.com{Tab}yddgbfxdybT1
+Click, 893 841
+Send {enter}
+return
+
+:://us3::
+Send 19355165193{Tab}yddgbfxdybT1
+Click, 893 841
+Send {enter}
+return
+
+
 
 ;;;;;;;;;;快速打开程序/搜索(快捷键);;;;;;;;;;;;;;;;;;;;;;;;; 
 ;用google搜索 
@@ -96,6 +115,10 @@ return
 Send ^c
 Sleep 300
 Run https://www.youtube.com/results?search_query=%clipboard%
+return 
+;优酷
+#u:: 
+Run https://youku.com/
 return 
 ;用京东搜索
 #j:: 
@@ -170,7 +193,18 @@ changeBlackList:
 	GUI,GQR:Show,w520 h460,GenQR
 	Return
 
-
+;=======================Potplayer播放器长按倍速播放=======================
+#IfWinActive ahk_class PotPlayer64 ahk_exe PotPlayerMini64.exe
+Right::		; 长按0.3秒方向右键进行倍速播放，松开时恢复
+	KeyWait, Right, T0.3
+	if ErrorLevel {
+		Send, cccccccccccccccccccc	; 调整此数值修改速度
+		ToolTip, >>>
+		KeyWait, Right	; 松开按键恢复正常速度
+		Send, z
+		ToolTip
+	} else Send {Right}
+	return
 
 ;;;;;;;;;;;;;;;;;;左右键同时按关闭窗口;;;;;;;;;;;;;;;;;;;;;
 
