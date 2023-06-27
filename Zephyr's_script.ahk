@@ -65,25 +65,39 @@ return
 Run http://www.w3school.com.cn/jsref/index.asp
 return
 
-:://us1::
-Send 365964325@qq.com{Tab}yddgbfxdybt
-Click, 893 841
+;genshin
+; :://us1::
+; Send 365964325@qq.com{Tab}yddgbfxdybt
+; Click, 893 841
+; Send {enter}
+; return
+
+; :://us2::
+; Send czf1009@126.com{Tab}yddgbfxdybT1
+; Click, 893 841
+; Send {enter}
+; return
+
+; :://us3::
+; Send 19355165193{Tab}yddgbfxdybT1
+; Click, 893 841
+; Send {enter}
+; return
+
+:://psep::
+Send 365964325@qq.com{Tab}Monkey2Game
 Send {enter}
 return
 
-:://us2::
-Send czf1009@126.com{Tab}yddgbfxdybT1
-Click, 893 841
+:://psub::
+Send 365964325@qq.com{Tab}Monkey2Game~UB
 Send {enter}
 return
 
-:://us3::
-Send 19355165193{Tab}yddgbfxdybT1
-Click, 893 841
+:://pscoolapk::
+Send czf1009@qq.com{Tab}yddgbfxdybt
 Send {enter}
 return
-
-
 
 ;;;;;;;;;;快速打开程序/搜索(快捷键);;;;;;;;;;;;;;;;;;;;;;;;; 
 ;用google搜索 
@@ -148,7 +162,8 @@ return
 #s:: 
 Send ^c
 Sleep 300
-Run https://stackoverflow.com/search?q=%clipboard%
+; Run https://stackoverflow.com/search?q=%clipboard%
+Run https://so.zimuku.org/search?q=%clipboard%
 return 	
 ;csdn搜索
 #c:: 
@@ -162,6 +177,12 @@ return
 #WheelUp::Send {Volume_Up}  ; 增加 1 个音程的主音量 (通常为 5%).
 ; #WheelDown::Send {Volume_Down 3}  ; 降低 3 个音程的主音量.
 #WheelDown::Send {Volume_Down}  ; 降低 1 个音程的主音量.
+; LWin::
+;     while GetKeyState("LWin","P")
+;     {
+;         WheelUp::Volume_Up
+;     }
+; return
 #MButton::Send {Volume_Mute}  ; 对主音量进行静音/取消静音.
 
 ;===========\        通用label          \==================
@@ -193,19 +214,6 @@ changeBlackList:
 	GUI,GQR:Show,w520 h460,GenQR
 	Return
 
-;=======================Potplayer播放器长按倍速播放=======================
-#IfWinActive ahk_class PotPlayer64 ahk_exe PotPlayerMini64.exe
-Right::		; 长按0.3秒方向右键进行倍速播放，松开时恢复
-	KeyWait, Right, T0.3
-	if ErrorLevel {
-		Send, cccccccccccccccccccc	; 调整此数值修改速度
-		ToolTip, >>>
-		KeyWait, Right	; 松开按键恢复正常速度
-		Send, z
-		ToolTip
-	} else Send {Right}
-	return
-
 ;;;;;;;;;;;;;;;;;;左右键同时按关闭窗口;;;;;;;;;;;;;;;;;;;;;
 
 ~LButton & RButton::		
@@ -233,3 +241,23 @@ Right::		; 长按0.3秒方向右键进行倍速播放，松开时恢复
 	WinClose, ahk_id %G_Id%
 	Return
 }
+
+
+;=======================Potplayer播放器长按倍速播放=======================
+#IfWinActive ahk_class PotPlayer64 ahk_exe PotPlayerMini64.exe
+Right::		; 长按0.3秒方向右键进行倍速播放，松开时恢复
+	KeyWait, Right, T0.2
+	if ErrorLevel {
+		Send, c	; 调整此数值修改速度
+		ToolTip, >>>
+		KeyWait, Right	; 松开按键恢复正常速度
+		Send, z
+		ToolTip
+	} else Send {Right}
+	return
+s::Send {Media_Stop}
+
+; #IfWinActive ahk_exe Obsidian.exe
+; ^1::
+; 	Send {Home}{Home}- [ ] {Enter}
+; 	return

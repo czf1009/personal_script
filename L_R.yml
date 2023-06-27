@@ -11,6 +11,7 @@ Nothing:
   - ahk_exe Terraria.exe
   - ahk_exe tModLoader.exe
   - ahk_exe tModLoader64bit.exe
+  - ahk_exe dotnet.exe
   - ahk_exe mstsc.exe
   - ahk_exe streaming_client.exe
   - ahk_exe r5apex.exe                        #apex
@@ -37,5 +38,6 @@ CtrlW:
   - ahk_class CabinetWClass               #clover
 Esc:
   - ahk_class TFullScreenWindow               #FastStone
+  - ahk_exe WeChat.exe
 
 

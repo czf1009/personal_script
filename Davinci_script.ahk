@@ -38,6 +38,15 @@ If not A_IsAdmin    ;验证是否用了管理员权限 否则自动用管理员�
 	Sleep 500
 	Send b
 	return 
+	^b::
+	Send +{Home}
+	Send ^x
+	sleep 100
+	Send ^b
+	Send ^a
+	Send ^v
+	return
+
 #If
 
 
