@@ -255,7 +255,7 @@ Right::		; 长按0.3秒方向右键进行倍速播放，松开时恢复
 		ToolTip
 	} else Send {Right}
 	return
-s::Send {Media_Stop}
+s::Send {Media_Stop}{Space}
 
 ; #IfWinActive ahk_exe Obsidian.exe
 ; ^1::
